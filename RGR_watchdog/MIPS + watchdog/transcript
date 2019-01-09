@@ -1,0 +1,683 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 4.19.11-arch1-1-ARCH
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do sim.do 
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# ** Error: _mips_control__main_unit.v(11): near "o_wdt_wait_period_w_": syntax error, unexpected IDENTIFIER, expecting ')'
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# ** Error: data_tract_v2.v(145): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# ** Error: watchdog.v(16): (vlog-2730) Undefined variable: 'i_wait_period_w_en'.
+# ** Error: watchdog.v(1): Identifier must be declared with a port mode: i_wait_period_w_en.
+# ** Error: /opt/modelsim/modeltech/linux_x86_64/vlog failed.
+# Error in macro ./sim.do line 10
+# /opt/modelsim/modeltech/linux_x86_64/vlog failed.
+#     while executing
+# "vlog _mips_control__alu_unit.v _mips_control__main_unit.v alu.v barrel_shifter.v data_memory.v data_tract_v2.v instruction_memory.v mips_control_unit_..."
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 130 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 29
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Error: (vish-4014) No objects found matching '/testbench/mips/data_tract/wathcdog/i_wait_period'.
+# Error in macro ./sim.do line 27
+# (vish-4014) No objects found matching '/testbench/mips/data_tract/wathcdog/i_wait_period'.
+#     while executing
+# "add wave sim:/testbench/mips/data_tract/wathcdog/i_wait_period"
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Error: (vish-4014) No objects found matching '/testbench/mips/data_tract/wathcdog/counter_1'.
+# Error in macro ./sim.do line 28
+# (vish-4014) No objects found matching '/testbench/mips/data_tract/wathcdog/counter_1'.
+#     while executing
+# "add wave sim:/testbench/mips/data_tract/alu_result"
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 130 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 130 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 130 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 130 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Warning: (vsim-PLI-3409) Illegal binary digit 'j' in data on line 84 of file "mips_demo_program.bin".    : instruction_memory.v(12)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/mips/data_tract/instruction_memory
+# ** Warning: (vsim-PLI-3409) Illegal binary digit 'k' in data on line 84 of file "mips_demo_program.bin".    : instruction_memory.v(12)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/mips/data_tract/instruction_memory
+# ** Warning: (vsim-PLI-3409) Illegal binary digit 'j' in data on line 84 of file "mips_demo_program.bin".    : instruction_memory.v(12)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/mips/data_tract/instruction_memory
+# ** Warning: (vsim-PLI-3409) Illegal binary digit 'n' in data on line 84 of file "mips_demo_program.bin".    : instruction_memory.v(12)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/mips/data_tract/instruction_memory
+# ** Warning: (vsim-PLI-3409) Illegal binary digit 'j' in data on line 84 of file "mips_demo_program.bin".    : instruction_memory.v(12)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/mips/data_tract/instruction_memory
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 200 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 200 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34
+# Causality operation skipped due to absence of debug database file
+do sim.do
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module control_unit_alu_mips
+# -- Compiling module control_unit_main_mips
+# -- Compiling module alu_mips
+# -- Compiling module barrel_shifter
+# -- Compiling module data_memory_mips
+# -- Compiling module data_tract_mips
+# -- Compiling module instruction_memory_mips
+# -- Compiling module control_unit_full_mips
+# -- Compiling module testbench
+# -- Compiling module mux_5_bit
+# -- Compiling module mux_32_bit
+# -- Compiling module program_counter_mips
+# -- Compiling module register_file_mips
+# -- Compiling module sign_extender_mips
+# -- Compiling module mips_full_processor
+# -- Compiling module watchdog_timer
+# 
+# Top level modules:
+# 	testbench
+# vsim -novopt work.testbench 
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.testbench
+# Loading work.testbench
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mips_full_processor
+# Loading work.mips_full_processor
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_full_mips
+# Loading work.control_unit_full_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_main_mips
+# Loading work.control_unit_main_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.control_unit_alu_mips
+# Loading work.control_unit_alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_tract_mips
+# Loading work.data_tract_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.program_counter_mips
+# Loading work.program_counter_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_32_bit
+# Loading work.mux_32_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.instruction_memory_mips
+# Loading work.instruction_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.sign_extender_mips
+# Loading work.sign_extender_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.register_file_mips
+# Loading work.register_file_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.mux_5_bit
+# Loading work.mux_5_bit
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.alu_mips
+# Loading work.alu_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.barrel_shifter
+# Loading work.barrel_shifter
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.data_memory_mips
+# Loading work.data_memory_mips
+# Refreshing /home/max/Work dir/_University/_3 kurs/Assembler/RGR_watchdog/full_mips/work.watchdog_timer
+# Loading work.watchdog_timer
+# ** Warning: (vsim-3017) data_tract_v2.v(155): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: /testbench/mips/data_tract/watchdog
+# ** Warning: (vsim-3722) data_tract_v2.v(155): [TFMPC] - Missing connection for port 'o_fail_safe'.
+# ** Note: $finish    : mips_full_tb.v(25)
+#    Time: 200 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at mips_full_tb.v line 25
+# Simulation Breakpoint: 1
+# Break in Module testbench at mips_full_tb.v line 25
+# MACRO ./sim.do PAUSED at line 34

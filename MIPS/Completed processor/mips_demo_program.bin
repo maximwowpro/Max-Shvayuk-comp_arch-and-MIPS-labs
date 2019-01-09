@@ -1,0 +1,92 @@
+// Created by Max Shvayuk
+
+// Program finds the lowest value in an array of 6 elements
+// registers description:
+// R1 - array_size
+// R2 - R7 members of array
+// R10 - array counter
+// R11 - result (the lowest value in an array)
+// R12 - compared value (it compares with result each loop's iteration)
+// R13 - here 32'd1 stores (need this for "beq" instruction implementation
+// R14 - tmp_reg for storing intermediate results of calculations
+// R15 - base address of an array in memory (2 in our case)
+
+// addi zero_reg + immediate_constants to registers(0-7)
+// r_data_1 = 0
+// r_data_2 = address of the register in register_file, which immediate value should be stored
+// immediate constant - value, which should be stored to the register
+// fill the register file by values for an array
+
+@0  001000_00000_00001_00000_00000000101	// reg 1 = 5. This is index of the last value in array of array.
+
+// There are several arrays:
+@4  001000_00000_00010_00000_00000000101	// reg 2 = 5
+@8  001000_00000_00011_00000_00000000010	// reg 3 = 2
+@c  001000_00000_00100_00000_00000001001	// reg 4 = 9
+@10 001000_00000_00101_00000_00000001101	// reg 5 = 13
+@14 001000_00000_00110_00000_00000000001	// reg 6 = 1
+@18 001000_00000_00111_00000_00000000110	// reg 7 = 6
+
+// @4  001000_00000_00010_00000_00000000010	// reg 2 = 2
+// @8  001000_00000_00011_00000_00000000011	// reg 3 = 3
+// @c  001000_00000_00100_00000_00000000100	// reg 4 = 4
+// @10 001000_00000_00101_00000_00000000101	// reg 5 = 5
+// @14 001000_00000_00110_00000_00000000110	// reg 6 = 6
+// @18 001000_00000_00111_00000_00000000111	// reg 7 = 7
+
+// @4  001000_00000_00010_00000_00000000110	// reg 2 = 6
+// @8  001000_00000_00011_00000_00000000101	// reg 3 = 5
+// @c  001000_00000_00100_00000_00000000100	// reg 4 = 4
+// @10 001000_00000_00101_00000_00000000011	// reg 5 = 3
+// @14 001000_00000_00110_00000_00000000010	// reg 6 = 2
+// @18 001000_00000_00111_00000_00000000001	// reg 7 = 1
+
+// store word from register to data_memory
+// r_data_1 = 0
+// r_data_2 = address of the register in register_file, which value should be stored to data_memory
+// immediate constant - address in the data memory, where the word will be stored
+// copy array's values from register file to data memory
+@1c 101011_00000_00001_00000_00000000001	// sw from r1 to data_memory 1. This the is size of array.
+@20 101011_00000_00010_00000_00000000010	// sw from r2 to data_memory 2
+@24 101011_00000_00011_00000_00000000011	// sw from r3 to data_memory 3
+@28 101011_00000_00100_00000_00000000100	// sw from r4 to data_memory 4
+@2c 101011_00000_00101_00000_00000000101	// sw from r5 to data_memory 5
+@30 101011_00000_00110_00000_00000000110	// sw from r6 to data_memory 6
+@34 101011_00000_00111_00000_00000000111	// sw from r7 to data_memory 7
+
+
+// fill some registers by helpful values: 
+// base address of an array, 1 (compare value for beq instruction) and start result value (which is equal to the wirst member of array)
+@38 001000_00000_01111_00000_00000000010	// reg 15 = 2 (base address register)
+@3c 001000_00000_01101_00000_00000000001	// R13 = 1 (need this for beq instruction)
+@40 100011_01111_01011_0000000000000000		// lw from data_memory[base_addr(15)] to reg_11(result_register)
+
+
+// @label_loop
+// if we have reached the end of the loop - jump to the end of the program
+@44 000100_00001_01010_0000000000001000 	// beq R1 R10 @end_label	if (R1(array_size) == R10(array_counter) ) branch to @end_label
+
+// load numbers from data_memory to R12
+@48 001000_01010_01010_0000000000000001		// reg_10 = reg_10 + 1
+@4c 000000_01111_01010_01110_00000_100000	// tmp_reg(14) = base_addr_reg(15) + array_counter(10)
+@50 100011_01110_01100_0000000000000000		// lw from data_memory[base_addr(15) + array_counter(10)] to reg_12
+
+
+// compare values
+@54 000000_01100_01011_01110_00000_101010	// slt R12 R11  Rd=R14		if (R12 < R11) 	R14=1
+@58 000100_01110_01101_0000000000000001		// beq R14 R13 @label_save_R12_val_to_result_reg	if (R14 == 1(R13))   branch
+
+
+// implementation of the loop (repeat the same action several times)
+@5c 000010_00000000000000000000010001		// jump 32'h44 (instruction №17) (@label_loop)
+
+
+// @label_save_R12_val_to_result_reg
+// copy the lower value (of those that were compared) to result_reg(R11)
+@60 000000_00000_01100_01011_00000_100000	// add R12 R0 R11	R11 = R12 + R0  	R11 = R12
+@64 000010_00000000000000000000010001		// jump 32'h44 (instruction №17) (@label_loop)
+
+
+// @end_label
+@68 0000000000_0000000000_0000000000_00
+
